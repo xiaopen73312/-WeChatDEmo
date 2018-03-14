@@ -1,0 +1,20 @@
+<!--pages/reserve/hotel/hotel.wxml-->
+<view>
+<image style='height:100px' src='../../images/we5-6.png'></image>
+<view class="swiper-tab">
+    <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">概述</view>
+    <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">设施</view>
+    
+</view>
+<swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 31}}px" bindchange="bindChange">
+    
+    <swiper-item>
+      <view><image style='height:300px' src='../../images/we5-7.png'></image></view>
+    </swiper-item>
+    <!-- 我是呵呵 -->
+    <swiper-item>
+      <view><image style='height:300px' src='../../images/we5-8.png'></image></view>
+    </swiper-item>
+    
+</swiper>
+</view>

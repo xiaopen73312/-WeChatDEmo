@@ -1,0 +1,6 @@
+<view style="height:{{second_height}}px;width:{{second_width}}px">
+<image style='width:100%' bindtap="bindViewTap" src='../../images/we5-1.png'></image>
+ <image style='height:10%;width:100%' bindtap="bindImage"  src='../../images/we5-2.png'></image> 
+
+<image style='width:100%'  src='../../images/we5-3.png'></image>
+</view>

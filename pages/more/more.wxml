@@ -1,0 +1,4 @@
+<!--pages/more/more.wxml-->
+<view style="height:{{second_height}}px;width:{{second_width}}px">
+<image style='height:80%;width:100%' src='./../images/we2.png'></image>
+</view>

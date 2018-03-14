@@ -1,0 +1,40 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/map/map",
+    "pages/logs/logs",
+    "pages/reserve/reserve",
+    "pages/reserve/details/details",
+    "pages/reserve/hotel/hotel",
+    "pages/order/order",
+    "pages/request-payment/request-payment",
+    "pages/more/more"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "OYORooms",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "position": "bottom",
+    "backgroundColor": "#FFFFFF",
+    "color": "#242424",
+    "selectedColor": "#FF3030",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/order/order",
+        "text": "订单"
+      },
+    
+      {
+        "pagePath": "pages/more/more",
+        "text": "我的"
+      }
+    ]
+  }
+}

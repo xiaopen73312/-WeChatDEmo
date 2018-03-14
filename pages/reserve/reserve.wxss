@@ -1,0 +1,4 @@
+/* pages/hello/hello.wxss */
+body,html{
+  height: 100%;
+}
