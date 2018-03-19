@@ -26,7 +26,7 @@ Page({
     const searchLetter = city.searchLetter;
     const cityList = city.cityList();
     const sysInfo = wx.getSystemInfoSync();
-    console.log(sysInfo);
+    // console.log(sysInfo);
     const winHeight = sysInfo.windowHeight;
     const itemH = winHeight / searchLetter.length;
     let tempArr = [];
