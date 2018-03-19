@@ -20,6 +20,7 @@
     "position": "bottom",
     "backgroundColor": "#FFFFFF",
     "color": "#242424",
+    "text-aligin": "middle",
     "selectedColor": "#FF3030",
     "list": [
       {

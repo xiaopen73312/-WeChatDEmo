@@ -58,8 +58,8 @@ Page({
         // 计算主体部分高度,单位为px
         that.setData({
           // second部分高度 = 利用窗口可使用高度 - first部分高度（这里的高度单位为px，所有利用比例将300rpx转换为px）
-          second_height: res.windowHeight,
-          second_width: res.windowWidth
+          sys_height: res.windowHeight,
+          sys_width: res.windowWidth
           // - res.windowWidth / 750 * 300
         })
       }
