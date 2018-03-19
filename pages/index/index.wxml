@@ -24,7 +24,7 @@
           <view class='date'>{{date.outdate}}</view>
         </view>
     </view>
-    <button>预定</button>
+    <button bindtap='hotelList'>预定</button>
   </view>
 </view>
 

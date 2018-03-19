@@ -1,20 +1,26 @@
-<!--pages/reserve/hotel/hotel.wxml-->
-<view>
-<image style='height:100px' src='../../images/we5-6.png'></image>
-<view class="swiper-tab">
-    <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">概述</view>
-    <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">设施</view>
-    
-</view>
-<swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 31}}px" bindchange="bindChange">
-    
-    <swiper-item>
-      <view><image style='height:300px' src='../../images/we5-7.png'></image></view>
-    </swiper-item>
-    <!-- 我是呵呵 -->
-    <swiper-item>
-      <view><image style='height:300px' src='../../images/we5-8.png'></image></view>
-    </swiper-item>
-    
-</swiper>
+<view class='hotel'>
+  <view class='title-fix'>
+  <text>3月6日 - 3月8日</text>
+    <text>共3晚</text>
+    <text>酒店位置</text>
+  </view>
+
+ <view class='hotel-card-wrapper' wx:for="{{numberArray}}" wx:key="*this">
+  <view class='wrapper' bindtap='hotelDetail'>
+    <image src='../../images/picture_squre_58.png'></image>
+    <view class='content'>
+      <view class='title'>OYO 8005 莲之香酒店</view>
+      <view class='rate'><text class='text'>4.7分 非常好</text><text>2134条点评</text></view>
+      <view class='distance'>距离深圳宝安机场1.7公里</view>
+      <view class='discount'>
+        <view class='normal'>满减</view>
+        <view class='normal circel'>促</view>
+        <view class='normal special'>团购</view>
+      </view>
+    </view>
+    <view class='price'>
+      <view>¥19<text class='text'>起</text></view>
+    </view>
+  </view>
+ </view>
 </view>

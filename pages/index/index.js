@@ -14,10 +14,10 @@ Page({
      
   },
   //事件处理函数
-  bindViewTap: function() {
+  hotelList: function() {
     wx.navigateTo({
       //url: '../logs/logs'
-      url: '../reserve/reserve'
+      url: '../reserve/hotel/hotel'
       //  url: '../request-payment/request-payment'
     })
   },

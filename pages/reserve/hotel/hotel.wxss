@@ -1,20 +1,82 @@
-/* pages/reserve/hotel/hotel.wxss */
-
-
-.swiper-tab{
-	width: 100%;
-	border-bottom: 2rpx solid #242424;
-	text-align: center;
-	line-height: 80rpx;}
-.swiper-tab-list{  font-size: 30rpx;
-    display: inline-block;
-	width: 33.33%;
-	color: #242424;
+.hotel .title-fix{
+  height: 80rpx;
+  border-top: 2rpx solid rgba(63,67,71,.1);
+  border-bottom: 2rpx solid rgba(63,67,71,.1);
 }
-.on{ color: #FF3030;
-	border-bottom: 5rpx solid #FF3030;}
-
-.swiper-box{ display: block; height: 100%; width: 100%; overflow: hidden; }
-.swiper-box view{
-	text-align: center;
+.hotel-card-wrapper{
+  padding:0 16rpx;
+}
+.hotel-card-wrapper .wrapper{
+  padding:16rpx 0;
+  border-bottom: 2rpx solid rgba(216,216,216,.6);
+  overflow: hidden
+}
+.hotel-card-wrapper image{
+  float: left;
+  width: 153.6rpx;
+  height: 153.6rpx;
+}
+.hotel-card-wrapper .content{
+  float: left;
+  margin-left: 15.4rpx;
+  overflow: hidden;
+}
+.hotel-card-wrapper .title{
+  font-size: 30.72rpx;
+  color: #3F4347;
+}
+.hotel-card-wrapper .rate{
+  margin: 6rpx 0;
+  font-size: 23.04rpx;
+}
+.hotel-card-wrapper text{
+  color: #8D8D8D;
+}
+.hotel-card-wrapper .rate .text{
+  color: #FF9800;
+  margin-right: 7.8rpx;
+}
+.hotel-card-wrapper .distance{
+  margin-bottom: 9.8rpx;
+  font-size: 23.04rpx;
+  color: #8D8D8D;
+}
+.hotel-card-wrapper .discount{
+  display: flex;
+  float: left;
+}
+.hotel-card-wrapper .discount .normal{
+  width: 61.4rpx;
+  height: 30.8rpx;
+  line-height: 30.8rpx;
+  border: 2rpx solid #EE2E24;
+  border-radius: 15.36rpx;
+  text-align: center;
+  font-size: 19.2rpx;
+  color: #EE2E24;
+  margin-right: 9.4rpx;
+}
+.hotel-card-wrapper .discount .special{
+  border: 2rpx solid rgba(125,200,85,.7);
+  color: rgb(125,200,85);
+}
+.hotel-card-wrapper .discount .circel{
+  width: 30.8rpx;
+  height: 30.8rpx;
+  line-height: 30.8rpx;
+  border-radius: 15.4rpx;
+  color: #FFFFFF;
+  background: #EE2E24;
+}
+.hotel-card-wrapper .price{
+  float: right;
+  height: 153.6rpx;
+  font-size: 34.56rpx;
+  color: #EE2E24;
+  display: flex;
+  align-items: flex-end;
+}
+.hotel-card-wrapper .price .text{
+  font-size: 23.04rpx;
+  color: #8D8D8D;
 }

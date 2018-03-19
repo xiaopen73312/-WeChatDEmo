@@ -14,8 +14,13 @@ Page({
     winHeight: 0,
     // tab切换
     currentTab: 0,
+    numberArray: [1, 2, 3, 4,5,6,7,8,9,10]
   },
-
+  hotelDetail:function() {
+    wx.navigateTo({
+      url: '../details/details'
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -67,7 +72,7 @@ Page({
 
     
     wx.setNavigationBarTitle({
-      title: '酒店介绍'
+      title: '酒店列表'
     })
   },
 
