@@ -1,5 +1,5 @@
 <!--index.wxml-->
-<view  style="height:{{second_height}}px;width:{{second_width}}px">
+<!-- <view  style="height:{{second_height}}px;width:{{second_width}}px">
   <picker mode="date" value="{{date1}}" start="2010-01-01" end="2030-12-31" bindchange="bindDateChange">
     <view class="form_group">
         <text>住房时间：</text>
@@ -15,4 +15,5 @@
  <image style='height:80%;width:98%' bindtap="bindViewTap" src='./../images/we4.png'></image> 
 
 
-</view>
+</view> -->
+<view>2222</view>

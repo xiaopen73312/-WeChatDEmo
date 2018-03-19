@@ -24,7 +24,7 @@
           <view class='date'>3月6日</view>
         </view>
     </view>
-    <button>预定</button>
+    <button bindtap='hotelList'>预定</button>
   </view>
 </view>
 

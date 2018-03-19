@@ -1,0 +1,30 @@
+.hotel-details .pic{
+  width: 750rpx;
+  height: 500.2rpx;
+}
+.hotel-details text{
+  font-size: 24rpx;
+  color: #3F4347;
+}
+.hotel-details .text{
+  font-size: 28rpx;
+}
+.hotel-details .common{
+  display: flex;
+  height: 94rpx;
+  padding:0 30rpx;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2rpx solid rgba(63,67,71,.1);
+}
+.hotel-details .special{
+  border-bottom: none;
+}
+.hotel-details .common image{
+  width: 32rpx;
+  height: 32rpx;
+}
+.hotel-details .line{
+  background: rgba(63,67,71,.16);
+  height: 16rpx;
+}

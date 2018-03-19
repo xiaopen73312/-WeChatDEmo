@@ -1,6 +1,18 @@
-<view style="height:{{second_height}}px;width:{{second_width}}px">
-<image style='width:100%' bindtap="bindViewTap" src='../../images/we5-1.png'></image>
- <image style='height:10%;width:100%' bindtap="bindImage"  src='../../images/we5-2.png'></image> 
+<view class='hotel-details'>
+  <image src='../../images/picture_detail.png' class='pic'>
+  </image>
+  <view class='common'>
+    <text class='text'>OYO 8005 莲之香酒店</text><text>酒店介绍 ></text></view>
+  <view class='common'><text>O深圳市XX区XX街道XX号</text><text>地图 ></text></view>
+  <view class='common special'><text>联系电话：021-74839299</text>
+    <image src='../../images/icon_phone_red.png'></image></view>
 
-<image style='width:100%'  src='../../images/we5-3.png'></image>
+  <view class='line'></view>
+  <view>
+    <view class='common'>
+      <text>入住：2018-03-06</text>
+      <text>退房：2018-03-08</text>
+      <text>共3晚</text>
+      <image src='../../images/icon_edit_red.png'></image></view>
+  </view>
 </view>
