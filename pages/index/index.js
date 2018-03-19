@@ -4,10 +4,10 @@ const app = getApp()
 
 Page({
   data: {
-    // motto: '打造亚洲最大规模的经济连锁酒店',
+     
     userInfo: {},
     hasUserInfo: false,
-    // canIUse: wx.canIUse('button.open-type.getUserInfo')
+     
   },
   //事件处理函数
   bindViewTap: function() {
@@ -17,9 +17,11 @@ Page({
       //  url: '../request-payment/request-payment'
     })
   },
+
   onLoad: function () {
     
-  
+    // 获取用户的位置
+    this.getLocation();
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
@@ -47,25 +49,38 @@ Page({
       })
     }
   
-    var that = this
-    // 获取系统信息
-    wx.getSystemInfo({
+    
+  },
+  selectCity: function () {
+    wx.navigateTo({
+      url: '../switchcity/switchcity'
+    })
+  },
+
+  //定位当前城市
+  getLocation: function () {
+    var that = this;
+    wx.getLocation({
+      type: 'wgs84',
       success: function (res) {
-      
-        // 可使用窗口宽度、高度
-        console.log('height=' + res.windowHeight);
-        console.log('width=' + res.windowWidth);
-        // 计算主体部分高度,单位为px
-        that.setData({
-          // second部分高度 = 利用窗口可使用高度 - first部分高度（这里的高度单位为px，所有利用比例将300rpx转换为px）
-          sys_height: res.windowHeight,
-          sys_width: res.windowWidth
-          // - res.windowWidth / 750 * 300
+        //当前的经度和纬度
+        let latitude = res.latitude
+        let longitude = res.longitude
+        wx.request({
+          url: `https://apis.map.qq.com/ws/geocoder/v1/?location=${latitude},${longitude}&key=${app.globalData.tencentMapKey}`,
+          success: res => {
+            app.globalData.defaultCity = app.globalData.defaultCity ? app.globalData.defaultCity : res.data.result.ad_info.city;
+            app.globalData.defaultCounty = app.globalData.defaultCounty ? app.globalData.defaultCounty : res.data.result.ad_info.district;
+            that.setData({
+              location: app.globalData.defaultCity,
+              county: app.globalData.defaultCounty
+            });
+
+          }
         })
       }
     })
   },
- 
   // 用户点击右上角分享
   onShareAppMessage: function () {
     return {

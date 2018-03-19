@@ -8,7 +8,8 @@
     "pages/reserve/hotel/hotel",
     "pages/order/order",
     "pages/request-payment/request-payment",
-    "pages/more/more"
+    "pages/more/more",
+    "pages/switchcity/switchcity"
   ],
   "window": {
     "backgroundTextStyle": "light",
