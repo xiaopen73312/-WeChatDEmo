@@ -1,4 +1,11 @@
 App({
+  globalData: {
+    userInfo: null,
+   locationInfo: null,
+   tencentMapKey: "WAQBZ-OQWCK-TKCJZ-AM74R-PHQVF-J4FPI",
+   defaultCity: '',
+   defaultCounty: '',
+  },
   onLaunch: function () {
     //调用API从本地缓存中获取数据
     var logs = wx.getStorageSync('logs') || []
@@ -45,8 +52,5 @@ App({
     }
   }
 
-  , globalData: {
-    userInfo: null
-    , locationInfo: null
-  }
+  
 })

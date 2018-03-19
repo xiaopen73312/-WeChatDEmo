@@ -1,9 +1,9 @@
 <view class='home-page'>
   <view class='home-page-title'>打造亚洲最大规模的经济连锁酒店</view>
   <view class='home-order'>
-    <view class='home-order-location'>
+    <view class='home-order-location' bindtap="selectCity"  >
       <image src='../images/icon_location.png'></image>
-      <text>深圳</text>
+      <text>{{location}}{{county}}</text>
     </view>
     
     <view class='home-order-line'></view>
