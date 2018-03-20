@@ -20,11 +20,11 @@
           </view>
       </view>
       <view class='order-price'>
-          <view>
-            订单总价：<text>￥599.00</text>
+          <view class='left'>
+            订单总价：<text class='text1'>￥599.00</text>
           </view>
-          <view>
-            取消订单<text>立即支付</text>
+          <view class='right'>
+            取消订单<text class='text2'>立即支付</text>
           </view>
       </view>
     </swiper-item>

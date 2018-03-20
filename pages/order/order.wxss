@@ -14,9 +14,11 @@
 	border-bottom: 5rpx solid #FF3030;}
 
 .swiper-box{ display: block; height: 100%; width: 100%; overflow: hidden; }
-
+/* .swiper-box view{
+	text-align: center;
+} */
 .order-des{
-  padding: 24rpx 0 24rpx 30rpx;
+  padding: 24rpx 0 24rpx 60rpx;
   font-size: 24rpx;
   color: #3F4347;
   border-bottom: 2rpx solid rgba(63,67,71,.05);
@@ -27,3 +29,25 @@
 .order-des .time-wrapper .time{
   margin: 0 50rpx 0 36rpx;
 } 
+.order-price{
+  padding: 20rpx 52rpx 30rpx 60rpx;
+  font-size: 24rpx;
+  color: #3F4347;
+  overflow: hidden;
+  border-bottom: 2rpx solid rgba(63,67,71,.2);
+}
+.order-price .left{
+  float: left;
+}
+.order-price .right{
+  float: right;
+  color: #8D8D8D;
+}
+.order-price .text1{
+  font-size: 28rpx;
+  font-weight: bold
+}
+.order-price .text2{
+  color: #EE2E24;
+  margin-left: 24rpx;
+}
