@@ -4,7 +4,22 @@ Page({
    * 页面的初始数据
    */
   data: {
-    
+    hotelId:'',
+    hotelName:'',
+    hotelAdd:'',
+    hotelTel:'',
+    rooms:[
+      { id: 3, name: 'OYO8004', price: 400 },
+      { id: 2, name: 'OYO8003', price: 300 },
+      { id: 1, name: 'OYO8002', price: 200 },
+      { id: 0, name: 'OYO8001', price: 100 },
+    ],
+       
+  },
+  getMap:function(){
+    wx.navigateTo({
+      url: '../../map/map',
+    })
   },
   orderInfo: function() {
     wx.navigateTo({
@@ -16,7 +31,14 @@ Page({
    */
   onLoad: function (options) {
 
-    
+    // app.func.req('get','/gethotel/getchildren',
+    //  { 
+    //   id:440305,
+    //   key: app.globalData.tencentMapKey
+    //   }, 
+    //   function (res) {
+    //   console.log(res)
+    // });
     
   },
 
