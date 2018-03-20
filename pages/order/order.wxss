@@ -14,6 +14,16 @@
 	border-bottom: 5rpx solid #FF3030;}
 
 .swiper-box{ display: block; height: 100%; width: 100%; overflow: hidden; }
-.swiper-box view{
-	text-align: center;
+
+.order-des{
+  padding: 24rpx 0 24rpx 30rpx;
+  font-size: 24rpx;
+  color: #3F4347;
+  border-bottom: 2rpx solid rgba(63,67,71,.05);
 }
+.order-des .time-wrapper{
+  margin: 6rpx 0;
+} 
+.order-des .time-wrapper .time{
+  margin: 0 50rpx 0 36rpx;
+} 

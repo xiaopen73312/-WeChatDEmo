@@ -1,0 +1,78 @@
+.orderinfo-wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100%;
+}
+.order-info{
+  font-size: 24rpx;
+  color: #3F4347;
+  min-height: 100%;
+}
+.order-num{
+  padding: 26rpx 0 0 60rpx;
+  border-top: 2rpx solid rgba(63,67,71,.1);
+}
+.room-time{
+  padding:6rpx 84rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.room-type{
+  padding-left: 84rpx;
+  padding-bottom: 24rpx;
+}
+.order-info .common{
+  height: 90rpx;
+  line-height: 90rpx;
+  padding-left: 60rpx;
+  border-top: 2rpx solid rgba(63,67,71,.1);
+  text-align: left;
+  font-weight: bold;
+}
+.order-info .common image{
+  width: 30rpx;
+  height: 30rpx;
+  vertical-align: middle;
+}
+.order-info .common .count{
+  margin: 0 29rpx;
+  font-weight: normal;
+}
+.order-info .common input{
+  display: inline-block;
+  vertical-align: middle;
+  font-weight: normal;
+}
+.tips-wrapper{
+  padding-left: 60rpx;
+  border-top: 2rpx solid rgba(63,67,71,.2);
+}
+.tips-wrapper view{
+  margin-bottom: 16rpx;
+  opacity: 0.6;
+}
+.tips-wrapper .tips{
+  font-weight: bold;
+  opacity: 1;
+  margin: 18rpx 0 24rpx 0;
+}
+.submit-order{
+  background: #EE2E24;
+  height: 100rpx;
+  padding: 0 170rpx 0 68rpx;
+  font-size: 40rpx;
+  color: #FFFFFF;
+  line-height: 100rpx;
+}
+.submit-order text{
+  font-size: 28rpx;
+}
+.submit-order view{
+  display: inline-block;
+  width: 3rpx;
+  background: rgba(255,255,255,.4);
+  height: 60rpx;
+  vertical-align: middle;
+  margin: 0 169rpx 0 81rpx;
+}
