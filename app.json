@@ -12,6 +12,7 @@
     "pages/order/order",
     "pages/request-payment/request-payment",
     "pages/more/more",
+    "pages/more/login/login",
     "pages/switchcity/switchcity"
   ],
   "window": {
