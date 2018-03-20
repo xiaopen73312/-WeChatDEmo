@@ -6,29 +6,18 @@ Page({
   data: {
     
   },
-
+  orderInfo: function() {
+    wx.navigateTo({
+      url: '../orderinfo/orderinfo',
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
 
-    var that = this
-    // 获取系统信息
-    wx.getSystemInfo({
-      success: function (res) {
-
-        // 可使用窗口宽度、高度
-        console.log('height=' + res.windowHeight);
-        console.log('width=' + res.windowWidth);
-        // 计算主体部分高度,单位为px
-        that.setData({
-          // second部分高度 = 利用窗口可使用高度 - first部分高度（这里的高度单位为px，所有利用比例将300rpx转换为px）
-          second_height: res.windowHeight,
-          second_width: res.windowWidth
-          // - res.windowWidth / 750 * 300
-        })
-      }
-    })
+    
+    
   },
 
   /**

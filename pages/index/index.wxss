@@ -47,7 +47,7 @@
   text-align: center;
   box-sizing: border-box;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 .home-order-wrapper .title{
   font-size: 24rpx;

@@ -15,4 +15,26 @@
       <text>共3晚</text>
       <image src='../../images/icon_edit_red.png'></image></view>
   </view>
+  <view class='pay-wrapper'>
+    <view class='pay'>
+      <view class='left'>
+        <image src='../../images/picture_squre_58.png'></image>
+        <view class='block'>
+          <view>大床房</view>
+          <text class='special1'>大床 2米</text>
+        </view>
+      </view>
+      <view class='right'>
+        <text>
+          <text>预付价</text>
+          <text class='special2'>￥99</text>
+        </text>
+        <image src='../../images/button_pay_red.png' bindtap='orderInfo'></image>
+        <view class='right-bottom'>
+          <text>到付价</text>
+          <text class='special2'>￥199</text>
+        </view>
+      </view>
+    </view>
+  </view>
 </view>
