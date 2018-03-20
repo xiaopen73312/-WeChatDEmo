@@ -1,10 +1,14 @@
 //index.js
+require('../../utils/dateFormat.js');
 //获取应用实例
 const app = getApp()
 
 Page({
   data: {
-     
+    date: {
+      indate: new Date().format('MM月dd日'),
+      outdate: new Date(+new Date + 3600000 * 24).format('MM月dd日')
+    },
     userInfo: {},
     hasUserInfo: false,
      
@@ -20,8 +24,7 @@ Page({
 
   onLoad: function () {
     
-    // 获取用户的位置
-    this.getLocation();
+   
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
@@ -48,14 +51,31 @@ Page({
         }
       })
     }
-  
+    // 获取用户的位置
+    this.getLocation();
     
   },
-  selectCity: function () {
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
+    this.setData({
+      location: app.globalData.defaultCity,
+      county: app.globalData.defaultCounty
+    })
+  },
+  switchcity: function () {
     wx.navigateTo({
       url: '../switchcity/switchcity'
     })
   },
+  calendar: function () {
+    wx.navigateTo({
+      url: '../calendar/index'
+    })
+  },
+  
 
   //定位当前城市
   getLocation: function () {

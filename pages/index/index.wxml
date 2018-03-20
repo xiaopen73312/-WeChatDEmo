@@ -1,27 +1,27 @@
 <view class='home-page'>
   <view class='home-page-title'>打造亚洲最大规模的经济连锁酒店</view>
   <view class='home-order'>
-    <view class='home-order-location' bindtap="selectCity"  >
+    <view class='home-order-location' bindtap="switchcity"  >
       <image src='../images/icon_location.png'></image>
       <text>{{location}}{{county}}</text>
     </view>
     
     <view class='home-order-line'></view>
 
-    <view class='home-order-wrapper'>
+    <view class='home-order-wrapper' bindtap='calendar'>
         <view class='home-order-left'>
           <view class='title'>入住</view>
-          <view class='date'>3月6日</view>
+          <view class='date'>{{date.indate}}</view>
         </view>
 
         <view class='home-order-middle'>
-          <view>共3晚</view>
+          <view>共1晚</view>
           <view class='home-order-middle-line'></view>
         </view>
 
         <view class='home-order-right'>
           <view class='title'>退房</view>
-          <view class='date'>3月6日</view>
+          <view class='date'>{{date.outdate}}</view>
         </view>
     </view>
     <button bindtap='hotelList'>预定</button>
