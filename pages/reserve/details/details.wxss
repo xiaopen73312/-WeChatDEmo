@@ -28,3 +28,52 @@
   background: rgba(63,67,71,.16);
   height: 16rpx;
 }
+.hotel-details .pay-wrapper{
+  border-bottom: 2rpx solid rgba(63,67,71,.1);
+  overflow: hidden;
+}
+.hotel-details .pay{
+  padding: 24rpx 30rpx;
+  overflow: hidden;
+}
+.hotel-details .pay .left{
+  float: left;
+}
+.hotel-details .pay .left image{
+  width: 115.8rpx;
+  height: 115.8rpx;
+  vertical-align: middle;
+  margin-right: 18.2rpx;
+}
+.hotel-details .block{
+  display: inline-block;
+  vertical-align: middle
+}
+.hotel-details .left view{
+  font-size: 28rpx;
+  color: #3F4347;
+  margin-bottom:4rpx;
+}
+.hotel-details .pay text{
+  font-size: 24rpx;
+  color: #3F4347;
+}
+.hotel-details .pay .special1{
+  opacity: .6;
+}
+.hotel-details .pay .right{
+  float: right;
+}
+.hotel-details .pay .right image{
+  width: 124rpx;
+  height: 40rpx;
+  vertical-align: middle;
+}
+.hotel-details .pay .special2{
+  font-size: 35.04rpx;
+  color: #EE2E24;
+  margin: 0 36rpx 0 24rpx;
+}
+.hotel-details .pay .right-bottom{
+  margin-top:20rpx;
+}
