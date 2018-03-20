@@ -203,6 +203,7 @@
             var d = Math.round(((valueDate - today) / (86400000)));
             var endd = Math.round(((valueDate - new Date(start)) / (86400000))) + 1;
 
+            app.globalData.defaultEndd = endd-1;
             if (d < 0 && !this.isLateMightModel(valueDate)) {
                 return
             }
@@ -307,9 +308,9 @@
                 // });
               
              
-              app.globalData.indate = this.data.start;
-              app.globalData.outdate = this.data.end;
-              
+              app.globalData.defaultIndate = this.data.start;
+              app.globalData.defaultOutdate = this.data.end;
+               
               
             }
         },

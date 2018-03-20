@@ -6,6 +6,9 @@ App({
    tencentMapKey: "WAQBZ-OQWCK-TKCJZ-AM74R-PHQVF-J4FPI",
    defaultCity: '',
    defaultCounty: '',
+   defaultIndate:'',
+   defaultOutdate:'',
+   defaultEndd:1
   },
   
   onLaunch: function () {

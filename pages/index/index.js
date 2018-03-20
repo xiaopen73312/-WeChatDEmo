@@ -6,21 +6,17 @@ const app = getApp()
 Page({
   data: {
     date: {
-      indate: new Date().format('MM月dd日'),
-      outdate: new Date(+new Date + 3600000 * 24).format('MM月dd日')
+      // indate: new Date().format('MM月dd日'),
+      // outdate: new Date(+new Date + 3600000 * 24).format('MM月dd日')
+      indate: new Date().format('yyyy-MM-dd'),
+      outdate: new Date(+new Date + 3600000 * 24).format('yyyy-MM-dd')
     },
     userInfo: {},
     hasUserInfo: false,
+    totalDay:1
      
   },
-  //事件处理函数
-  hotelList: function() {
-    wx.navigateTo({
-      //url: '../logs/logs'
-      url: '../reserve/hotel/hotel'
-      //  url: '../request-payment/request-payment'
-    })
-  },
+ 
 
   onLoad: function () {
     
@@ -60,19 +56,41 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+     
+    if (app.globalData.defaultIndate!=''){
+      this.data.date.indate = app.globalData.defaultIndate;
+      this.data.date.outdate = app.globalData.defaultOutdate;
+    }
+    
     this.setData({
       location: app.globalData.defaultCity,
-      county: app.globalData.defaultCounty
+      county: app.globalData.defaultCounty,
+      totalDay: app.globalData.defaultEndd,
+      date: {
+        indate:  this.data.date.indate , 
+        outdate: this.data.date.outdate
+       }
     })
   },
+  //事件处理函数
+  hotelList: function () {
+    wx.navigateTo({
+      //url: '../logs/logs'
+      url: '../reserve/hotel/hotel'
+      //  url: '../request-payment/request-payment'
+    })
+  },
+  //城市选择
   switchcity: function () {
     wx.navigateTo({
       url: '../switchcity/switchcity'
     })
   },
+  //日期选择
   calendar: function () {
     wx.navigateTo({
-      url: '../calendar/index'
+      // url: '../calendar/index',
+      url: '../calendar/index?begin=' + this.data.date.indate + '&end=' + this.data.date.outdate,
     })
   },
   
