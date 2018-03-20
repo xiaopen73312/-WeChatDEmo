@@ -13,6 +13,8 @@
       winHeight: 0,
       // tab切换
       currentTab: 0,
+      // 是否显示暂无订单
+      show:false
     },
     onLoad: function () {
       

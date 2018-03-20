@@ -51,3 +51,15 @@
   color: #EE2E24;
   margin-left: 24rpx;
 }
+
+.no-order{
+  font-size: 28rpx;
+  color: #3F4347;
+  text-align: center;
+  padding-top: 318rpx;
+}
+.no-order image{
+  margin-bottom: 22rpx;
+  width: 70rpx;
+  height: 80rpx;
+}

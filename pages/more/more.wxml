@@ -1,4 +1,8 @@
-<!--pages/more/more.wxml-->
-<view style="height:{{second_height}}px;width:{{second_width}}px">
-<image style='height:80%;width:100%' src='./../images/we2.png'></image>
+<view class='personal'>
+  <view class='login'>
+    <image src='../images/button_login.png'></image>
+  </view>
+  <view class='hotline'>我的客服<text>021-74839299</text>
+    <image src='../images/icon_phone_red.png'></image>
+  </view>
 </view>
