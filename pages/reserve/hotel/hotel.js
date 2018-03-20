@@ -7,6 +7,13 @@ Page({
    * 页面的初始数据
    */
   data: {
+    
+     inMoth:0,
+     outMoth:0,
+     inDay:0,
+     outDay:0,
+     totalDay:1,
+
     /**
           * 页面配置
           */
@@ -14,7 +21,14 @@ Page({
     winHeight: 0,
     // tab切换
     currentTab: 0,
-    numberArray: [1, 2, 3, 4,5,6,7,8,9,10]
+    numberArray: [1, 2, 3, 4,5,6,7,8,9,10],
+    objectArray: [
+   
+      { id: 3, name: 'OYO8004',price:400 },
+      { id: 2, name: 'OYO8003', price: 300},
+      { id: 1, name: 'OYO8002', price: 200},
+      { id: 0, name: 'OYO8001', price: 100},
+    ],
   },
   hotelDetail:function() {
     wx.navigateTo({
@@ -25,13 +39,29 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    this.onGetDayInfo(options);
+    // app.func.req('get','/ws/district/v1/getchildren',
+    //  { 
+    //   id:440305,
+    //   key: app.globalData.tencentMapKey
+    //   }, 
+    //   function (res) {
+    //   console.log(res)
+    // }); 
+    // app.func.req('get', '/wechat/token',
+    //   {
+         
+    //   },
+    //   function (res) {
+    //     console.log(res)
+    //   }); 
+
 
     var that = this;
     /**
    * 获取系统信息
    */
     wx.getSystemInfo({
-
       success: function (res) {
         that.setData({
           winWidth: res.windowWidth,
@@ -116,7 +146,17 @@ Page({
    */
   onShareAppMessage: function () {
   
-  }
+  },
  
-
+  onGetDayInfo: function (options){
+    // options.begin.getFullYear();
+    this.setData({
+      inMoth: new Date(options.begin).getMonth() + 1,
+      outMoth: new Date(options.end).getMonth() + 1,
+      inDay: new Date(options.begin).getDate(),
+      outDay: new Date(options.end).getDate(),
+      totalDay: options.totalDay
+    })
+     
+  }
 })

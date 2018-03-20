@@ -1,5 +1,6 @@
 //index.js
 require('../../utils/dateFormat.js');
+const util = require('../../utils/util.js')
 //获取应用实例
 const app = getApp()
 
@@ -67,17 +68,17 @@ Page({
       county: app.globalData.defaultCounty,
       totalDay: app.globalData.defaultEndd,
       date: {
-        indate:  this.data.date.indate , 
-        outdate: this.data.date.outdate
+        indate: util.formatTime(new Date(this.data.date.indate))  , 
+        outdate: util.formatTime(new Date(this.data.date.outdate)) 
        }
     })
   },
   //事件处理函数
+  //获取城市列表
   hotelList: function () {
     wx.navigateTo({
-      //url: '../logs/logs'
-      url: '../reserve/hotel/hotel'
-      //  url: '../request-payment/request-payment'
+      url: '../reserve/hotel/hotel?begin=' + this.data.date.indate + '&end=' + this.data.date.outdate + '&location=' + app.globalData.defaultCity + '&totalDay=' + this.data.totalDay,
+      
     })
   },
   //城市选择
@@ -90,7 +91,7 @@ Page({
   calendar: function () {
     wx.navigateTo({
       // url: '../calendar/index',
-      url: '../calendar/index?begin=' + this.data.date.indate + '&end=' + this.data.date.outdate,
+      url: '../calendar/index?begin=' + this.data.date.indate + '&end=' + this.data.date.outdate ,
     })
   },
   

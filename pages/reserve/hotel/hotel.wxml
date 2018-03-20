@@ -1,15 +1,15 @@
 <view class='hotel'>
   <view class='title-fix'>
-  <text>3月6日 - 3月8日</text>
-    <text>共3晚</text>
+  <text>{{inMoth}}月{{inDay}}日 - {{outMoth}}月{{outDay}}日</text>
+    <text>共{{totalDay}}晚</text>
     <text>酒店位置</text>
   </view>
 
- <view class='hotel-card-wrapper' wx:for="{{numberArray}}" wx:key="*this">
+ <view class='hotel-card-wrapper' wx:for="{{objectArray}}" wx:key="*this">
   <view class='wrapper' bindtap='hotelDetail'>
     <image src='../../images/picture_squre_58.png'></image>
     <view class='content'>
-      <view class='title'>OYO 8005 莲之香酒店</view>
+      <view class='title'>{{item.name}}</view>
       <view class='rate'><text class='text'>4.7分 非常好</text><text>2134条点评</text></view>
       <view class='distance'>距离深圳宝安机场1.7公里</view>
       <view class='discount'>
@@ -19,7 +19,7 @@
       </view>
     </view>
     <view class='price'>
-      <view>¥19<text class='text'>起</text></view>
+      <view>{{item.price}}<text class='text'>起</text></view>
     </view>
   </view>
  </view>

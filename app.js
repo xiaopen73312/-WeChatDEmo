@@ -1,3 +1,4 @@
+var http = require('service/http.js')
 App({
 
   globalData: {
@@ -57,6 +58,8 @@ App({
   //     })
   //   }
   // }
-
+  func: {
+    req: http.req
+  }
   
 })
