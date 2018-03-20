@@ -2,16 +2,16 @@
   <view class='title-fix'>
   <text>{{inMoth}}月{{inDay}}日 - {{outMoth}}月{{outDay}}日</text>
     <text>共{{totalDay}}晚</text>
-    <text>酒店位置</text>
+    <text bindtap='hotelDetail'>酒店位置</text>
   </view>
 
- <view class='hotel-card-wrapper' wx:for="{{objectArray}}" wx:key="*this">
+ <view class='hotel-card-wrapper' wx:for="{{hotels}}" wx:key="*this">
   <view class='wrapper' bindtap='hotelDetail'>
     <image src='../../images/picture_squre_58.png'></image>
     <view class='content'>
       <view class='title'>{{item.name}}</view>
       <view class='rate'><text class='text'>4.7分 非常好</text><text>2134条点评</text></view>
-      <view class='distance'>距离深圳宝安机场1.7公里</view>
+      <view class='distance'>{{item.city}}{{item.street}}</view>
       <view class='discount'>
         <view class='normal'>满减</view>
         <view class='normal circel'>促</view>
@@ -19,7 +19,7 @@
       </view>
     </view>
     <view class='price'>
-      <view>{{item.price}}<text class='text'>起</text></view>
+      <view>19<text class='text'>起</text></view>
     </view>
   </view>
  </view>

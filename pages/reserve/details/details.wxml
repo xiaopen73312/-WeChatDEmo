@@ -3,7 +3,8 @@
   </image>
   <view class='common'>
     <text class='text'>OYO 8005 莲之香酒店</text><text>酒店介绍 ></text></view>
-  <view class='common'><text>O深圳市XX区XX街道XX号</text><text>地图 ></text></view>
+  <view class='common'><text>O深圳市XX区XX街道XX号</text>
+  <text bindtap='getMap'>地图 ></text></view>
   <view class='common special'><text>联系电话：021-74839299</text>
     <image src='../../images/icon_phone_red.png'></image></view>
 
@@ -15,7 +16,8 @@
       <text>共3晚</text>
       <image src='../../images/icon_edit_red.png'></image></view>
   </view>
-  <view class='pay-wrapper'>
+
+   <view class='pay-wrapper' wx:for="{{rooms}}" wx:key="*this"> 
     <view class='pay'>
       <view class='left'>
         <image src='../../images/picture_squre_58.png'></image>
