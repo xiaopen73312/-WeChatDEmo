@@ -1,13 +1,18 @@
+
+var app = getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
+  
   data: {
     hotelId:'',
-    hotelName:'',
+    hotelName:'OYO8005 莲之乡酒店',
     hotelAdd:'',
     hotelTel:'',
+    latitude:'22.53332',
+    longitude:'113.93041',
     rooms:[
       { id: 3, name: 'OYO8004', price: 400 },
       { id: 2, name: 'OYO8003', price: 300 },
@@ -18,7 +23,7 @@ Page({
   },
   getMap:function(){
     wx.navigateTo({
-      url: '../../map/map',
+      url: '../../map/map?latitude=' + this.data.latitude + '&longitude=' + this.data.longitude + '&name=' + this.data.hotelName,
     })
   },
   orderInfo: function() {
@@ -92,13 +97,7 @@ Page({
       url: '../hotel/hotel'
     })
   },
-  bindImage: function () {
-    wx.navigateTo({
-      //url: '../logs/logs'
-      url: '/pages/map/map'
-    })
- 
-  },
+   
   /**
    * 用户点击右上角分享
    */

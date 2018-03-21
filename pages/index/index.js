@@ -114,7 +114,9 @@ Page({
               location: app.globalData.defaultCity,
               county: app.globalData.defaultCounty
             });
-
+            console.log("latitude",latitude )
+            console.log("longitude",longitude)
+            // console.log("res", res)
           }
         })
       }

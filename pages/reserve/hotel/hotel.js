@@ -50,20 +50,21 @@ Page({
     //   function (res) {
     //   console.log(res)
     // }); 
-    var request_url = 'search/hotels?     additional_fields=cancellation_policies%2Cbest_image%2Croom_pricing%2Cavailability%2Camenities%2Crestrictions%2Ccategory%2Ccaptains_info%2Cnew_applicable_filters%2Cadditional_charge_info%2Cimages%2Chotel_images%2Cguest_ratings&available_room_count%5Bcheckin%5D=20%2F03%2F2018&available_room_count%5Bcheckout%5D=21%2F03%2F2018&available_room_count%5Bmin_count%5D=1&fields=id%2Cname%2Ccity%2Cstreet%2Ccategory%2Cgeo_location%2Ccategory%2Chotel_type%2Calternate_name%2Cshort_address&filters%5Bcoordinates%5D%5Bcity%5D=hyderabad&format_response%5Bbatch%5D%5Bcount%5D=20&format_response%5Bbatch%5D%5Boffset%5D=0&format_response%5Bsort_params%5D%5Bsort_on%5D=&format_response%5Bsort_params%5D%5Bascending%5D=true&pre_apply_coupon_switch=true&rooms_config=1%2C0%2C0&source=Web+Booking'
+    var request_url = 'search/hotels?additional_fields=best_image,room_pricing,availability,tax_structure,restrictions,all_tags,images,hotel_images,category,amenities,dominant_color,captains_info,cx_rating,property_type&available_room_count[checkin]=25/02/2018&available_room_count[checkout]=26/02/2018&available_room_count[min_count]=1&fields=id,name,city,street,category,geo_location,all_tags,all_tags_with_details,category,hotel_type,alternate_name&filters[coordinates][latitude]=&filters[coordinates][longitude]=&filters[coordinates][city]=goa&source=Web%20Booking'
 
-    app.func.req('get', request_url,
-      {
-        // ACCESS_TOKEN: 'dUxaRnA5NWJyWFlQYkpQNnEtemo6bzdvX01KLUNFbnRyS3hfdEgyLUE=',
-      },
-      function (res) {
-        console.log(res)
-        that.setData({
-          hotels: res.hotels
-        });
+    // app.func.req('get', request_url,
+    //   {
+    //     // ACCESS_TOKEN: 'dUxaRnA5NWJyWFlQYkpQNnEtemo6bzdvX01KLUNFbnRyS3hfdEgyLUE=',
+    //   },
+    //   function (res) {
+    //     console.log(res)
+    //     // debugger;
+    //     that.setData({
+    //       hotels: res.hotels
+    //     });
 
         
-      }); 
+    //   }); 
 
 
     var that = this;

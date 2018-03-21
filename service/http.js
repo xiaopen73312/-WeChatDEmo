@@ -1,5 +1,5 @@
 // var rootDocment = 'https://apis.map.qq.com';//你的域名
-var rootDocment = 'http://dev-mm-6.ap-southeast-1.elasticbeanstalk.com/api/v2/';//你的域名
+var rootDocment = 'http://dev-mm-4.ap-southeast-1.elasticbeanstalk.com/api/v2/';//你的域名
 function req(method,url, data, cb) {
   wx.request({
     url: rootDocment + url,
