@@ -1,0 +1,24 @@
+.login view{
+  height: 81rpx;
+  padding: 0 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 2rpx solid rgba(63,67,71,.1);
+  border-bottom: 2rpx solid rgba(63,67,71,.1);
+}
+.login .special{
+  border-top: none;
+}
+.login .code{
+  width: 182rpx;
+  height: 52rpx;
+}
+.login button{
+  width: 560rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  background: #EE2E24;
+  margin: 72rpx auto 0 auto;
+  color: #fff;
+}

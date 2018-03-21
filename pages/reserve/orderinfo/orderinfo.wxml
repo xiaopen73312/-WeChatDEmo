@@ -10,8 +10,8 @@
   <view class='common'>房间数量：
     <image src='../../images/icon_ minus.png'></image><text class='count'>1间</text>
     <image src='../../images/icon_add.png'></image></view>
-  <view class='common'><text decode="{{true}}" space='emsp'>&emsp;入住人：</text><input placeholder='请填写'></input></view>
-  <view class='common'>联系方式：<input placeholder='请填写'></input></view>
+  <view class='common'><text decode="{{true}}" space='emsp'>&emsp;入住人：</text><input placeholder='请填写' placeholder-style="opacity: 0.6;"></input></view>
+  <view class='common'>联系方式：<input placeholder='请填写' placeholder-style="opacity: 0.6;"></input></view>
   <view class='tips-wrapper'>
     <view class='tips'>温馨提示</view>
     <view>发票：如有需要请向前台领取</view>

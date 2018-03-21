@@ -3,7 +3,6 @@ require('../../utils/dateFormat.js');
 const util = require('../../utils/util.js')
 //获取应用实例
 const app = getApp()
-
 Page({
   data: {
     date: {
@@ -17,11 +16,7 @@ Page({
     totalDay:1
      
   },
- 
-
   onLoad: function () {
-    
-   
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
@@ -50,19 +45,16 @@ Page({
     }
     // 获取用户的位置
     this.getLocation();
-    
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-     
     if (app.globalData.defaultIndate!=''){
       this.data.date.indate = app.globalData.defaultIndate;
       this.data.date.outdate = app.globalData.defaultOutdate;
     }
-    
     this.setData({
       location: app.globalData.defaultCity,
       county: app.globalData.defaultCounty,

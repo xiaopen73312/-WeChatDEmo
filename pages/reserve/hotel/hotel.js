@@ -1,24 +1,11 @@
-// pages/reserve/hotel/hotel.js
-//获取应用实例
 var app = getApp()
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-    
      inMoth:0,
      outMoth:0,
      inDay:0,
      outDay:0,
      totalDay:1,
-
-    /**
-          * 页面配置
-          */
-    winWidth: 0,
-    winHeight: 0,
     // tab切换
     currentTab: 0,
     numberArray: [1, 2, 3, 4,5,6,7,8,9,10],
@@ -61,23 +48,7 @@ Page({
         that.setData({
           hotels: res.hotels
         });
-
-        
       }); 
-
-
-    var that = this;
-    /**
-   * 获取系统信息
-   */
-    wx.getSystemInfo({
-      success: function (res) {
-        that.setData({
-          winWidth: res.windowWidth,
-          winHeight: res.windowHeight
-        });
-      }
-    });
   },
   /**
       * 滑动切换tab

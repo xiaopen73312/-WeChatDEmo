@@ -9,7 +9,7 @@ Page({
   },
   loginOrregist: function() {
     wx.redirectTo({
-      url: '',
+      url: './login/login',
     })
   },
   /**

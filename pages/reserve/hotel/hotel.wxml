@@ -9,9 +9,9 @@
   <view class='wrapper' bindtap='hotelDetail'>
     <image src='../../images/picture_squre_58.png'></image>
     <view class='content'>
-      <view class='title'>{{item.name}}距离深圳宝安机场1.7公里距离深圳宝安机场1.7公里距离深圳宝安机场1.7公里距离深圳宝安机场1.7公里</view>
+      <view class='title'>{{item.name}}</view>
       <view class='rate'><text class='text'>4.7分 非常好</text><text>2134条点评</text></view>
-      <view class='distance'>距离深圳宝安机场1.7公里距离深圳宝安机场1.7公里距离深圳宝安机场1.7公里距离深圳宝安机场1.7公里距离深圳宝安机场1.7公里距离深圳宝安机场1.7公里</view>
+      <view class='distance'>里</view>
       <view class='discount'>
         <view class='normal'>满减</view>
         <view class='normal circel'>促</view>

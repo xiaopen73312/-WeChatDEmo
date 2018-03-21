@@ -1,6 +1,5 @@
 var http = require('service/http.js')
 App({
-
   globalData: {
     userInfo: null,
    locationInfo: null,

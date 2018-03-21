@@ -1,6 +1,3 @@
- 
- 
-    
     var app = getApp();
     Page({
         toViewIndex: 0, //记录 所选中的区域位置 出现在可视区

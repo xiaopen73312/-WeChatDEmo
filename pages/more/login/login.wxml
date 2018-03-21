@@ -1,7 +1,10 @@
-<view>
+<view class='login'>
   <view>
-    <icon></icon>
-    <input></input>
-    <image></image>
+    <input placeholder='请输入手机号码'></input>
+    <image class='code' src='../../images/button_verification_red.png'></image>
   </view>
+  <view class='special'>
+    <input placeholder='请输入验证码'></input>
+  </view>
+  <button>确定</button>
 </view>
