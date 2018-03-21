@@ -1,13 +1,25 @@
+const util = require('../../../utils/util.js')
+var app = getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
+  
   data: {
     hotelId:'',
-    hotelName:'',
+    hotelName:'OYO8005 莲之乡酒店',
     hotelAdd:'',
     hotelTel:'',
+    latitude:'22.53332',
+    longitude:'113.93041',
+    date: {
+      // indate: new Date().format('MM月dd日'),
+      // outdate: new Date(+new Date + 3600000 * 24).format('MM月dd日')
+      indate: new Date().format('yyyy-MM-dd'),
+      outdate: new Date(+new Date + 3600000 * 24).format('yyyy-MM-dd')
+    },
+    totalDay: app.globalData.defaultEndd,
     rooms:[
       { id: 3, name: 'OYO8004', price: 400 },
       { id: 2, name: 'OYO8003', price: 300 },
@@ -18,7 +30,7 @@ Page({
   },
   getMap:function(){
     wx.navigateTo({
-      url: '../../map/map',
+      url: '../../map/map?latitude=' + this.data.latitude + '&longitude=' + this.data.longitude + '&name=' + this.data.hotelName,
     })
   },
   orderInfo: function() {
@@ -55,7 +67,19 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    
+    console.log('时间', app.globalData.defaultIndate)
+    if (app.globalData.defaultIndate != '') {
+      this.data.date.indate = app.globalData.defaultIndate;
+      this.data.date.outdate = app.globalData.defaultOutdate;
+    }
+    this.setData({
+
+      totalDay: app.globalData.defaultEndd,
+      date: {
+        indate: util.formatTime(new Date(this.data.date.indate)),
+        outdate: util.formatTime(new Date(this.data.date.outdate))
+      }
+    })
   },
 
   /**
@@ -92,12 +116,11 @@ Page({
       url: '../hotel/hotel'
     })
   },
-  bindImage: function () {
+  editDays: function() {
     wx.navigateTo({
-      //url: '../logs/logs'
-      url: '/pages/map/map'
+      // url: '../calendar/index',
+      url: '../../calendar/index?begin=' + app.globalData.defaultIndate + '&end=' + app.globalData.defaultOutdate,
     })
- 
   },
   /**
    * 用户点击右上角分享

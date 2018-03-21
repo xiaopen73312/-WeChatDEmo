@@ -5,13 +5,20 @@
     <text bindtap='hotelDetail'>酒店位置</text>
   </view>
 
+<<<<<<< HEAD
  <view class='hotel-card-wrapper' wx:for="{{objectArray}}" wx:key="*this">
   <view class='wrapper' bindtap='hotelDetail'>
+=======
+ <view class='hotel-card-wrapper' wx:for="{{hotels}}" wx:key="*this">
+  <view class='wrapper' bindtap='hotelDetail' id='{{item.id}}'>
+>>>>>>> c78172019a55301cef85a8727366e8ad9c7cf193
     <image src='../../images/picture_squre_58.png'></image>
     <view class='content'>
+    <!-- <input  hidden='true' value='{{item.id}}'></input> -->
       <view class='title'>{{item.name}}</view>
       <view class='rate'><text class='text'>4.7分 非常好</text><text>2134条点评</text></view>
       <view class='distance'>里</view>
+      <view class='distance'>{{item.city}}{{item.street}}</view>
       <view class='discount'>
         <view class='normal'>满减</view>
         <view class='normal circel'>促</view>
