@@ -18,11 +18,12 @@
   <view class='common pay-way'>
     支付方式
   </view>
-  <view class='common choose-pay'>
+  <view class='common choose-pay' bindtap='payway' data-color="{{color=='white'?0:1}}">
     <image src='../../images/icon_wechat.png'></image>微信支付
+    <icon type="success" size="20" color="{{color}}" class="{{color=='white'?'nochosen':'chosen'}}"/>
   </view>
 
-  <view class='common goback-home'>返回首页</view>
+  <view class='common goback-home' bindtap='backhome'>返回首页</view>
 </view>
 <view class='pay-now'>去支付</view>
 </view>

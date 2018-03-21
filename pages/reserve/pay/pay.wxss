@@ -46,13 +46,24 @@
   padding: 22rpx 0 22rpx 60rpx;
 }
 .choose-pay{
-  padding: 20rpx 0 20rpx 60rpx;
+  padding: 20rpx 60rpx;
 }
 .choose-pay image{
   width: 48rpx;
   height: 46rpx;
   vertical-align: middle;
   margin-right: 24rpx;
+}
+.choose-pay icon{
+  vertical-align: middle;
+  float: right;
+}
+.choose-pay .nochosen{
+  border: 2rpx solid rgba(63,67,71,.5);
+  border-radius: 80%;
+}
+.choose-pay .chosen{
+  border: none
 }
 .goback-home{
   text-align: center;

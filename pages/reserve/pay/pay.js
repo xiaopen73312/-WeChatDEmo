@@ -4,14 +4,13 @@ Page({
    * 页面的初始数据
    */
   data: {
-    
+    color: 'white'
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
   },
 
   /**
@@ -63,5 +62,16 @@ Page({
    */
   onShareAppMessage: function () {
     
+  },
+  backhome: function() {
+    console.log(333)
+    wx.reLaunch({
+      url: '../../index/index',
+    })
+  },
+  payway: function(e) {
+    this.setData({
+      color: !e.currentTarget.dataset.color?'green':'white'
+    })
   }
 })
