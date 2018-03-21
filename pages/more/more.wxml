@@ -1,6 +1,6 @@
 <view class='personal'>
   <view class='login'>
-    <image src='../images/button_login.png'></image>
+    <image src='../images/button_login.png' bindtap='loginOrregist'></image>
   </view>
   <view class='hotline'>我的客服<text>021-74839299</text>
     <image src='../images/icon_phone_red.png'></image>

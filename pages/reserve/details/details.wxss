@@ -16,6 +16,14 @@
   justify-content: space-between;
   align-items: center;
   border-bottom: 2rpx solid rgba(63,67,71,.1);
+  flex-wrap: nowrap;
+  overflow: hidden;
+}
+.hotel-details .common .common-text{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex: 1;
 }
 .hotel-details .special{
   border-bottom: none;

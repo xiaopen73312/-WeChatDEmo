@@ -9,17 +9,22 @@
 .hotel-card-wrapper .wrapper{
   padding:16rpx 0;
   border-bottom: 2rpx solid rgba(216,216,216,.6);
-  overflow: hidden
+  display: flex;
+  flex-wrap: nowrap;
 }
 .hotel-card-wrapper image{
-  float: left;
   width: 153.6rpx;
   height: 153.6rpx;
 }
 .hotel-card-wrapper .content{
-  float: left;
   margin-left: 15.4rpx;
   overflow: hidden;
+  flex: 1;
+}
+.hotel-card-wrapper .content view{
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .hotel-card-wrapper .title{
   font-size: 30.72rpx;
@@ -69,7 +74,6 @@
   background: #EE2E24;
 }
 .hotel-card-wrapper .price{
-  float: right;
   height: 153.6rpx;
   font-size: 34.56rpx;
   color: #EE2E24;

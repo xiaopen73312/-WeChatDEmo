@@ -8,10 +8,12 @@
     "pages/reserve/details/details",
     "pages/reserve/hotel/hotel",
     "pages/reserve/orderinfo/orderinfo",
+    "pages/reserve/introduce/introduce",
     "pages/reserve/pay/pay",
     "pages/order/order",
     "pages/request-payment/request-payment",
     "pages/more/more",
+    "pages/more/login/login",
     "pages/switchcity/switchcity"
   ],
   "window": {

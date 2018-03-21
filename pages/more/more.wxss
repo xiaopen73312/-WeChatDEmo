@@ -19,6 +19,7 @@
 }
 .hotline text{
   margin: 0 20rpx 0 136rpx;
+  vertical-align: middle;
 }
 .hotline image{
   width: 32rpx;
