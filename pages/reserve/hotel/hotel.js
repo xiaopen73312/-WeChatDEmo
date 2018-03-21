@@ -1,6 +1,7 @@
 var app = getApp()
 Page({
   data: {
+   
      inMoth:0,
      outMoth:0,
      inDay:0,
@@ -19,9 +20,12 @@ Page({
     hotels:[]
   },
   //根据酒店id到酒店详情
-  hotelDetail:function() {
+  hotelDetail:function(e) {
+    console.log('e:',e)
+    
+    console.log('id:', e.currentTarget.id);
     wx.navigateTo({
-      url: '../details/details'
+      url: '../details/details?hotelId=' + e.currentTarget.id
     })
   },
   /**
@@ -29,30 +33,22 @@ Page({
    */
   onLoad: function (options) {
     this.onGetDayInfo(options);
-    // app.func.req('get','/ws/district/v1/getchildren',
-    //  { 
-    //   id:440305,
-    //   key: app.globalData.tencentMapKey
-    //   }, 
-    //   function (res) {
-    //   console.log(res)
-    // }); 
- 
-    var request_url = 'search/hotels?additional_fields=best_image,room_pricing,availability,tax_structure,restrictions,all_tags,images,hotel_images,category,amenities,dominant_color,captains_info,cx_rating,property_type&available_room_count[checkin]=25/02/2018&available_room_count[checkout]=26/02/2018&available_room_count[min_count]=1&fields=id,name,city,street,category,geo_location,all_tags,all_tags_with_details,category,hotel_type,alternate_name&filters[coordinates][latitude]=&filters[coordinates][longitude]=&filters[coordinates][city]=goa&source=Web%20Booking'
-
-    // app.func.req('get', request_url,
-    //   {
-    //     // ACCESS_TOKEN: 'dUxaRnA5NWJyWFlQYkpQNnEtemo6bzdvX01KLUNFbnRyS3hfdEgyLUE=',
-    //   },
-    //   function (res) {
-    //     console.log(res)
-    //     // debugger;
-    //     that.setData({
-    //       hotels: res.hotels
-    //     });
-
+   
+    var request_url = 'search/hotels?additional_fields=best_image,room_pricing,availability,tax_structure,restrictions,all_tags,images,hotel_images,category,amenities,dominant_color,captains_info,cx_rating,property_type&available_room_count[checkin]=' + options.begin + '&available_room_count[checkout]=' + options.end + '&available_room_count[min_count]=1&fields=id,name,city,street,category,geo_location,all_tags,all_tags_with_details,category,hotel_type,alternate_name&filters[coordinates][latitude]=&filters[coordinates][longitude]=&filters[coordinates][city]=goa&source=Web%20Booking'
+     
+    app.func.req('get', request_url,
+      {
         
-    //   }); 
+ 
+        // ACCESS_TOKEN: 'dUxaRnA5NWJyWFlQYkpQNnEtemo6bzdvX01KLUNFbnRyS3hfdEgyLUE=',
+      },
+      function (res) {
+        console.log(res)
+       
+        that.setData({
+          hotels: res.hotels
+        });     
+      }); 
 
 
     var that = this;

@@ -11,10 +11,10 @@
   <view class='line'></view>
   <view>
     <view class='common'>
-      <text>入住：2018-03-06</text>
-      <text>退房：2018-03-08</text>
-      <text>共3晚</text>
-      <image src='../../images/icon_edit_red.png'></image></view>
+      <text>入住：{{date.indate}}</text>
+      <text>退房：{{date.outdate}}</text>
+      <text>共{{totalDay}}晚</text>
+      <image src='../../images/icon_edit_red.png' bindtap='editDays' ></image></view>
   </view>
 
    <view class='pay-wrapper' wx:for="{{rooms}}" wx:key="*this"> 
