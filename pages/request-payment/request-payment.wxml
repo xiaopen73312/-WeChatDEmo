@@ -1,7 +1,7 @@
 
 
 <view class="container">
-  <template is="head" data="{{title: 'requestPayment'}}"/>
+  <template   data="{{title: 'requestPayment'}}"/>
 
   <view class="page-body">
     <view class="page-section">

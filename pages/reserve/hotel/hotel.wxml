@@ -1,15 +1,17 @@
 <view class='hotel'>
   <view class='title-fix'>
-  <text>{{inMoth}}月{{inDay}}日 - {{outMoth}}月{{outDay}}日</text>
-    <text>共{{totalDay}}晚</text>
-    <text bindtap='hotelDetail'>酒店位置</text>
+    <text>{{inMoth}}月{{inDay}}日 - {{outMoth}}月{{outDay}}日</text>
+    <text class='total'>共{{totalDay}}晚<text class='triangle'></text></text>
+    <text bindtap='hotelDetail' class='location'>酒店位置<text class='triangle'></text></text>
   </view>
+ 
    <loading hidden="{{hidden}}">
   加载中...
  </loading>
  <view class='hotel-card-wrapper' wx:for="{{hotels}}" wx:key="*this">
  
   <view class='wrapper' wx:if="{{index < 9 }}" bindtap='hotelDetail' id='{{item.id}}'>
+ 
     <image src='../../images/picture_squre_58.png'></image>
     <view class='content'>
     <!-- <input  hidden='true' value='{{item.id}}'></input> -->

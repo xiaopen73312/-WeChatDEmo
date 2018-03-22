@@ -51,6 +51,7 @@ Page({
       function (res) {
         console.log(res)
        
+ 
        for(var i=1;i<7;i++){
          that.data.hotels.push(res.hotels[i]);
        }
@@ -61,6 +62,7 @@ Page({
             hotels: that.data.hotels
         }); 
         that.changeHidden();    
+ 
       }); 
 
 

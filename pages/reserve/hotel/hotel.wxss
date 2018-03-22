@@ -1,7 +1,35 @@
 .hotel .title-fix{
+  width: 100%;
   height: 80rpx;
   border-top: 2rpx solid rgba(63,67,71,.1);
   border-bottom: 2rpx solid rgba(63,67,71,.1);
+  font-size: 24rpx;
+  color: #3F4347;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 28rpx 144rpx 28rpx 86rpx;
+  justify-content: space-around;
+}
+.hotel .total{
+  position: relative;
+  padding-right: 35rpx;
+}
+.hotel .location{
+  position: relative;
+  padding-right: 35rpx;
+  padding-left: 10rpx;
+}
+.hotel .triangle{
+  display: inline-block;
+  width:0; 
+  height:0;
+  border-width:12rpx;
+  border-style:solid;
+  border-color:black transparent transparent transparent;
+  position: absolute;
+  right: 0;
+  top: 12rpx;
 }
 .hotel-card-wrapper{
   padding:0 16rpx;
