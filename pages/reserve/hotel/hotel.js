@@ -35,19 +35,19 @@ Page({
     this.onGetDayInfo(options);
     var request_url = 'search/hotels?additional_fields=best_image,room_pricing,availability,tax_structure,restrictions,all_tags,images,hotel_images,category,amenities,dominant_color,captains_info,cx_rating,property_type&available_room_count[checkin]=' + options.begin + '&available_room_count[checkout]=' + options.end + '&available_room_count[min_count]=1&fields=id,name,city,street,category,geo_location,all_tags,all_tags_with_details,category,hotel_type,alternate_name&filters[coordinates][latitude]=&filters[coordinates][longitude]=&filters[coordinates][city]=goa&source=Web%20Booking'
      
-    // app.func.req('get', request_url,
-    //   {
+    app.func.req('get', request_url,
+      {
         
  
-    //     // ACCESS_TOKEN: 'dUxaRnA5NWJyWFlQYkpQNnEtemo6bzdvX01KLUNFbnRyS3hfdEgyLUE=',
-    //   },
-    //   function (res) {
-    //     console.log(res)
+        // ACCESS_TOKEN: 'dUxaRnA5NWJyWFlQYkpQNnEtemo6bzdvX01KLUNFbnRyS3hfdEgyLUE=',
+      },
+      function (res) {
+        console.log(res)
        
-    //     that.setData({
-    //       hotels: res.hotels
-    //     });     
-    //   }); 
+        that.setData({
+          hotels: res.hotels
+        });     
+      }); 
 
 
     var that = this;

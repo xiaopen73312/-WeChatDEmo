@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    login: true,  //判断用户是否已登录
   },
   loginOrregist: function() {
     wx.redirectTo({
@@ -66,5 +66,9 @@ Page({
    */
   onShareAppMessage: function () {
   
+  },
+  //退出登录
+  loginout: function() {
+
   }
 })
