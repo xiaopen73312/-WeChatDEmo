@@ -1,5 +1,8 @@
 Page({
   data: {
+    hotelName: 'OYO8005 莲之乡酒店',
+    hotelAddress: '',
+    hotelInfo: '',
     winHeight: "",//窗口高度,
     winWidth: '',
     currentTab: 0, //预设当前项的值
@@ -34,7 +37,8 @@ Page({
       })
     }
   },
-  onLoad: function () {
+  onLoad: function (options) {
+    console.log(options)
     var that = this;
     //  高度自适应
     wx.getSystemInfo({
@@ -50,6 +54,14 @@ Page({
         });
       }
     });
+
+    that.setData({
+      hotelName: options.hotelName,
+      hotelAddress: options.hotelAddress,
+ 
+      hotelInfo: options.hotelInfo,
+    }); 
+
   },
   // footerTap: app.footerTap
 })
