@@ -6,7 +6,7 @@ function req(method,url, data, cb) {
     url: rootDocment + url,
     data: data,
     method: method,
-    header: { 'Content-Type': 'application/json', 'ACCESS_TOKEN':           'dUxaRnA5NWJyWFlQYkpQNnEtemo6bzdvX01KLUNFbnRyS3hfdEgyLUE=' },
+    header: { 'Content-Type': 'application/json', 'ACCESS_TOKEN':           'QmpDZlRxZWo2UkZ5M3pSeHZ5NW46bi13NHN0ZTV5V1I1aGpCUVVHOUM6aThoZnRvanBHdmJ6RWM2Y2RZN006OTQ5NDA1MjAwMQ==' },
     success: function (res) {
       return typeof cb == "function" && cb(res.data)
     },
