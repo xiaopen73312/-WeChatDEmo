@@ -8,8 +8,7 @@ Page({
     
   },
   subMitorder:function() {
-    console.log("提交：", app.globalData.OPEN_ID);
-    this.setMessage();
+    
     wx.redirectTo({
       url: '../pay/pay',
     })
@@ -133,9 +132,16 @@ Page({
       header: { 'Content-Type': 'application/json' },
       success: function (res) {
         console.log(res.data)
+        wx.redirectTo({
+          url: '../pay/pay',
+        })
+
       },
       fail: function (res) {
-        console.log(res.data)
+        console.log('',res.data)
+        wx.redirectTo({
+          url: '../pay/pay',
+        })
       }
     })
     }

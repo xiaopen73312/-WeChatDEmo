@@ -9,7 +9,7 @@ Page({
   data: {
     hotelId:'',
     hotelName:'OYO8005 莲之乡酒店',
-    hotelAdd:'',
+    hotelAddress:'',
     hotelTel:'',
     latitude:'22.53332',
     longitude:'113.93041',
@@ -44,19 +44,31 @@ Page({
       phoneNumber: '8888888'  
     })
     } , 
+    // var url='';
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var that = this;
+    console.log(options)
 
-    // app.func.req('get','/gethotel/getchildren',
-    //  { 
-    //   id:440305,
-    //   key: app.globalData.tencentMapKey
-    //   }, 
-    //   function (res) {
-    //   console.log(res)
-    // });
+    app.func.req('get','/hotels/' + options.hotelId + '?fields=name,alternate_name,longitude,latitude,category,address,oyo_id,id,formatted_checkin_time,formatted_checkout_time,city,country_name,country,currency_symbol,short_address,use_oyo_name&additional_fields=room_pricing,images,amenity_list,restrictions,rich_amenities,payment_methods,cancellation_policies,additional_charge_info,captains_info,service_tax_compliance_text,pac_validate_info,shortlist_info,additional_info,social_rating,guest_ratings,urgency_info&available_room_count[checkin]=22-Mar-2018&available_room_count[checkout]=23-Mar-2018&rooms_config=1%2C0%2C0&pre_apply_coupon_switch=true&user_mode[]=CorporateGuest&requested_coupon=BOOK25&version=118&partner_app_version=118&android_id=706529785c7821a9&idfa=036e3e5b-1232-4ff6-82f8-c4adbff252cc&sid=1521691554344',
+     { 
+      id:440305,
+      key: app.globalData.tencentMapKey
+      }, 
+      function (res) {
+
+      console.log(res)
+      that.setData({
+        hotelName: res.name,
+        hotelAddress: res.address,
+        latitude:res.latitude,
+        longitude: res.longitude,
+
+      }); 
+       
+    });
     
   },
 
