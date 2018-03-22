@@ -11,11 +11,10 @@ Page({
     hotelName:'OYO8005 莲之乡酒店',
     hotelAddress:'',
     hotelTel:'',
+    hotelInfo:'',
     latitude:'22.53332',
     longitude:'113.93041',
     date: {
-      // indate: new Date().format('MM月dd日'),
-      // outdate: new Date(+new Date + 3600000 * 24).format('MM月dd日')
       indate: new Date().format('yyyy-MM-dd'),
       outdate: new Date(+new Date + 3600000 * 24).format('yyyy-MM-dd')
     },
@@ -28,16 +27,33 @@ Page({
     ],
        
   },
+  //事件处理函数
+
+  editDays: function () {
+    wx.navigateTo({
+      // url: '../calendar/index',
+      url: '../../calendar/index?begin=' + app.globalData.defaultIndate + '&end=' + app.globalData.defaultOutdate,
+    })
+  },
+
   getMap:function(){
     wx.navigateTo({
       url: '../../map/map?latitude=' + this.data.latitude + '&longitude=' + this.data.longitude + '&name=' + this.data.hotelName,
     })
   },
-  orderInfo: function() {
+
+  introduce: function () {
     wx.navigateTo({
-      url: '../orderinfo/orderinfo',
+      url: '../introduce/introduce?hotelInfo=' + this.data.hotelInfo + '&hotelName=' + this.data.hotelName + '&hotelAddress=' + this.data.hotelAddress,
     })
   },
+
+  orderInfo: function() {
+    wx.navigateTo({
+      url: '../orderinfo/orderinfo?hotelInfo=' + this.data.hotelInfo + '&hotelName=' + this.data.hotelName + '&hotelAddress=' + this.data.hotelAddress,
+    })
+  },
+  
   callPhone:function()
   {
     wx.makePhoneCall({
@@ -65,7 +81,7 @@ Page({
         hotelAddress: res.address,
         latitude:res.latitude,
         longitude: res.longitude,
-
+        hotelInfo: res.service_tax_compliance_text,
       }); 
        
     });
@@ -86,7 +102,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    console.log('时间', app.globalData.defaultIndate)
+ 
     if (app.globalData.defaultIndate != '') {
       this.data.date.indate = app.globalData.defaultIndate;
       this.data.date.outdate = app.globalData.defaultOutdate;
@@ -128,28 +144,12 @@ Page({
   onReachBottom: function () {
     
   },
-  //事件处理函数
-  bindViewTap: function () {
-    wx.navigateTo({
-      //url: '../logs/logs'
-      url: '../hotel/hotel'
-    })
-  },
-  editDays: function() {
-    wx.navigateTo({
-      // url: '../calendar/index',
-      url: '../../calendar/index?begin=' + app.globalData.defaultIndate + '&end=' + app.globalData.defaultOutdate,
-    })
-  },
+  
   /**
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
     
   },
-  introduce: function () {
-    wx.navigateTo({
-      url: '../introduce/introduce',
-    })
-  }
+ 
 })

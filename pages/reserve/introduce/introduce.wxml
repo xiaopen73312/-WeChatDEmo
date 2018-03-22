@@ -14,9 +14,9 @@
         <swiper-item>
             <scroll-view scroll-y="true" class="scoll-h" >
                 <view class='tab1'>
-                  <text decode='true' space='emsp'>&emsp;&emsp;OYO 天邸酒店是一家新建的超酷酒店。</text>
-                  <text decode='true' space='emsp'>&emsp;&emsp;这家精美的超现代酒店位于大鹏，邻近海滩，附近有水上公园、酒吧和美食，兼具便捷与舒适。</text>
-	                <text decode='true' space='emsp'>&emsp;&emsp;我们诚挚欢迎大家来入住和体验，不管你是想要休短假的深圳人，还是来深圳旅游观光的游客；同时我们也接待举办活动和庆典的大型团体。重点是我们将以试销价为您提供住宿及服务，99 元即享受舒适入住。</text>
+                  <text decode='true' space='emsp'>&emsp;&emsp;{{hotelName}}</text>
+                  <text decode='true' space='emsp'>&emsp;&emsp;{{hotelAddress}}</text>
+	                <text decode='true' space='emsp'>&emsp;&emsp;{{hotelInfo}}</text>
                 </view>
             </scroll-view>
         </swiper-item>

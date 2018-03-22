@@ -1,3 +1,4 @@
+const util = require('../../../utils/util.js')
 const app = getApp();
 Page({
 
@@ -5,7 +6,14 @@ Page({
    * 页面的初始数据
    */
   data: {
-    
+    date: {
+      indate: new Date().format('yyyy-MM-dd'),
+      outdate: new Date(+new Date + 3600000 * 24).format('yyyy-MM-dd')
+    },
+    totalDay: app.globalData.defaultEndd,
+    hotelName: 'OYO8005 莲之乡酒店',
+    hotelAddress: '',
+    hotelInfo: '',
   },
   subMitorder:function() {
     
@@ -17,7 +25,13 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+    var that = this;
+    that.setData({
+      hotelName: options.hotelName,
+      hotelAddress: options.hotelAddress,
+
+      hotelInfo: options.hotelInfo,
+    });
   },
 
   /**
@@ -34,7 +48,18 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    
+    if (app.globalData.defaultIndate != '') {
+      this.data.date.indate = app.globalData.defaultIndate;
+      this.data.date.outdate = app.globalData.defaultOutdate;
+    }
+    this.setData({
+
+      totalDay: app.globalData.defaultEndd,
+      date: {
+        indate: util.formatTime(new Date(this.data.date.indate)),
+        outdate: util.formatTime(new Date(this.data.date.outdate))
+      }
+    })
   },
 
   /**
@@ -86,27 +111,27 @@ Page({
         "form_id": e.detail.formId,
         "data": {
           "keyword1": {
-            "value": "OYO80001",
+            "value": this.data.hotelName,
             "color": "#173177"
           },
           "keyword2": {
-            "value": "2018年01月05日 12:30",
+            "value": new Date().format('yyyy年MM月dd日 hh:mm'),
             "color": "#173177"
           },
           "keyword3": {
-            "value": "500",
+            "value": "199",
             "color": "#173177"
           },
           "keyword4": {
-            "value": "201",
+            "value": this.data.hotelAddress,
             "color": "#173177"
           },
           "keyword5": {
-            "value": "2018-4-1",
+            "value": "305",
             "color": "#173177"
           },
           "keyword6": {
-            "value": "广州市天河区天河路208号",
+            "value": this.data.date.indate,
             "color": "#173177"
           },
           "keyword7": {

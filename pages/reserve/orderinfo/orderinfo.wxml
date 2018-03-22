@@ -3,9 +3,9 @@
 <view class='order-info'>
   <view class='order-num'>订单号：1218428</view>
   <view class='room-time'>
-    <text>入住：2018-03-06</text>
-    <text>退房：2018-03-08</text>
-    <text>共3晚</text>
+    <text>入住：{{date.indate}}</text>
+    <text>退房：{{date.outdate}}</text>
+    <text>共{{totalDay}}晚</text>
   </view>
   <view class='room-type'>房型：大床房</view>
   <view class='common'>房间数量：
@@ -16,15 +16,18 @@
   <view class='tips-wrapper'>
     <view class='tips'>温馨提示</view>
     <view>发票：如有需要请向前台领取</view>
-    <view>退订：xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</view>
-    <view>退房：xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</view>
+    <view>退订：8888-8888-888</view>
+    <view>退房：8888-8888-888</view>
   </view>
 </view>
 
 <view class='submit-order'>
   <view><text class='special'>￥199</text><text>.00</text></view>
    <view class='line'></view> 
-  <button bindtap='subMitorder' plain='true' form-type='submit'>提交订单</button>
+ 
+  <button  form-type='submit' plain='true'>提交订单</button>
+ 
+ 
 </view>
 </form>
 </view>
