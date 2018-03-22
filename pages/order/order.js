@@ -5,7 +5,8 @@ Page({
     winHeight: "",//窗口高度,
     winWidth:'',
     currentTab: 0, //预设当前项的值
-    scrollLeft: 0, //tab标题的滚动条位置
+    scrollLeft: 0, //tab标题的滚动条位置,
+    login: true,   //判断用户是否已登录
   },
   // 滚动切换标签样式
   switchTab: function (e) {

@@ -84,3 +84,28 @@
   width: 70rpx;
   height: 80rpx;
 }
+.order-login-wrapper{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  border-top: 2rpx solid rgba(63,67,71,.1);
+}
+.order-login{
+  text-align: center;
+}
+.order-login view{
+  font-size: 28rpx;
+  color: #3F4347;
+  margin-top: 24rpx;
+  margin-bottom: 76rpx;
+}
+.order-login .pic1{
+  width: 100rpx;
+  height: 90rpx;
+}
+.order-login .pic2{
+  width: 294rpx;
+  height: 74rpx;
+}
