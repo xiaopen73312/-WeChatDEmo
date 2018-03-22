@@ -127,5 +127,10 @@ Page({
    */
   onShareAppMessage: function () {
     
+  },
+  introduce: function () {
+    wx.navigateTo({
+      url: '../introduce/introduce',
+    })
   }
 })

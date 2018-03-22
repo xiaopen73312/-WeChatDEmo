@@ -1,0 +1,41 @@
+.introduce .banner{
+  width: 100%;
+  height: 260rpx;
+}
+.introduce .title{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%,-50%,0);
+  font-size: 44rpx;
+  color: #FFFFFF;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.50);
+}
+.tab-introduce{
+    height: 88rpx;
+    width: 100%;
+    background: #fff;
+    border-bottom: 2rpx solid rgba(63,67,71,.1);
+    font-size: 28rpx;
+    color: #3F4347;
+    line-height: 88rpx;
+}
+.tab-introduce .tab-item{
+  width: 50%;
+  text-align: center;
+  display: inline-block;
+  height: 100%;
+}
+.tab-introduce.active{
+  position: relative;
+}
+.tab-introduce.active:after{ 
+  content: "";
+  display: block;
+  height: 6rpx;
+  width: 50%;
+  background: #EE2E24;
+  position: absolute; 
+  bottom: 0;
+  left: 25%;
+}
