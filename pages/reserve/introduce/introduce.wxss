@@ -9,7 +9,9 @@
   transform: translate3d(-50%,-50%,0);
   font-size: 44rpx;
   color: #FFFFFF;
-  text-shadow: 0 2px 4px rgba(0,0,0,0.50);
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  width: 100%;
+  text-align: center;
 }
 .tab-introduce{
     height: 88rpx;
@@ -26,10 +28,10 @@
   display: inline-block;
   height: 100%;
 }
-.tab-introduce.active{
+.tab-introduce .active{
   position: relative;
 }
-.tab-introduce.active:after{ 
+.tab-introduce .active:after{ 
   content: "";
   display: block;
   height: 6rpx;
@@ -38,4 +40,61 @@
   position: absolute; 
   bottom: 0;
   left: 25%;
+}
+.introduce .scoll-h{
+  height: 100%;
+}
+.introduce .tab1{
+  padding: 44rpx 50rpx;
+  font-size: 24rpx;
+  color: #3F4347;
+}
+.introduce .tab1 text{
+  display: inline-block;
+  margin-bottom: 44rpx;
+}
+.introduce .tab2 {
+  font-size: 23.32rpx;
+  color: #3F4347;
+}
+.introduce .common {
+  text-align: center;
+  float: left;
+  overflow: hidden;
+  width: 33.33%;
+  vertical-align: bottom;
+  height: 107rpx;
+  margin-top: 61rpx;
+}
+.introduce .common text{
+  display: block;
+  margin-top: 20rpx;
+}
+.introduce .common .pic1{
+  width: 51.6rpx;
+  height: 40.2rpx;
+}
+.introduce .common .pic2{
+  width: 55.8rpx;
+  height: 45.4rpx;
+}
+.introduce .common .pic3{
+  width: 49.2rpx;
+  height: 46.6rpx;
+}
+.introduce .common .pic4{
+  width: 48rpx;
+  height: 51.8rpx;
+}
+.introduce .common .pic5{
+  width: 54.4rpx;
+  height: 46.6rpx;
+}
+.introduce .common .pic6{
+  width: 53.2rpx;
+  height: 46.6rpx;
+}
+.introduce .common .pic7{
+  width: 49.2rpx;
+  height: 46.6rpx;
 }
