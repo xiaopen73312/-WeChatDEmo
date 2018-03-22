@@ -1,7 +1,7 @@
 <view class='hotel-details'>
   <image src='../../images/picture_detail.png' class='pic'>
   </image>
-  <view class='common'>
+  <view class='common' bindtap='introduce'>
     <text class='text common-text'>OYO 8005 莲之香酒店OYO 8005 莲之香酒店OYO 8005 莲之香酒店OYO 8005</text><text>酒店介绍 ></text></view>
   <view class='common'><text class='common-text'>O深圳市XX区XX街道XX号OYO 8005 莲之香酒店OYO 8005 莲之香酒店OYO 8005 莲之香酒店OYO 8005 莲之香酒店OYO 8005 莲之香酒店</text><text bindtap='getMap'>地图 ></text></view>
   <view class='common special'><text class='common-text' >联系电话：021-74839299OYO 8005 莲之香酒店OYO 8005 莲之香酒店OYO 8005 莲之香酒店OYO 8005 莲之香酒店OYO 8005 莲之香酒店</text>

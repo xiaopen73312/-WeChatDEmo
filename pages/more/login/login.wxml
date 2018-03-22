@@ -1,10 +1,17 @@
 <view class='login'>
-  <view>
-    <input placeholder='请输入手机号码'></input>
+  <view class='common'>
+    <view>
+      <image src='../../images/icon_login_phone.png'></image>
+      <input placeholder='请输入手机号码' placeholder-style="opacity: 0.6;"></input>
+    </view>
+  
     <image class='code' src='../../images/button_verification_red.png'></image>
   </view>
-  <view class='special'>
-    <input placeholder='请输入验证码'></input>
+  <view class='common special'>
+    <view>
+        <image src='../../images/icon_login_password.png'></image>
+      <input placeholder='请输入验证码' placeholder-style="opacity: 0.6;"></input>
+      </view>
   </view>
   <button>确定</button>
 </view>

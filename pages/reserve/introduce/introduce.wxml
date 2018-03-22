@@ -1,0 +1,14 @@
+<view class='introduce'>
+<view style='position:relative'>
+  <image src='../../images/bannar_130.png' class='banner'></image>
+  <text class='title'>打造亚洲最大规模的经济连锁酒店</text>
+</view>
+ 
+
+  <view >
+    <scroll-view scroll-x="true" class="tab-introduce" scroll-left="{{scrollLeft}}">
+        <view class="tab-item {{currentTab==0?'active':''}}"  data-current="0" bindtap="swichNav">概况</view>
+        <view class="tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="swichNav">设施</view>
+    </scroll-view>
+  </view>
+</view>
