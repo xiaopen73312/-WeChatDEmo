@@ -38,6 +38,12 @@ Page({
       url: '../orderinfo/orderinfo',
     })
   },
+  callPhone:function()
+  {
+    wx.makePhoneCall({
+      phoneNumber: '8888888'  
+    })
+    } , 
   /**
    * 生命周期函数--监听页面加载
    */
@@ -63,6 +69,7 @@ Page({
     })
   },
 
+  
   /**
    * 生命周期函数--监听页面显示
    */

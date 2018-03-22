@@ -21,7 +21,7 @@ Page({
   },
   //根据酒店id到酒店详情
   hotelDetail:function(e) {
-    console.log('e:',e)
+    // console.log('e:',e)
     
     console.log('id:', e.currentTarget.id);
     wx.navigateTo({
