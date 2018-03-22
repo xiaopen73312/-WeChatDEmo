@@ -60,19 +60,34 @@
 .submit-order{
   background: #EE2E24;
   height: 100rpx;
-  padding: 0 170rpx 0 68rpx;
-  font-size: 40rpx;
   color: #FFFFFF;
   line-height: 100rpx;
-}
-.submit-order text{
   font-size: 28rpx;
 }
 .submit-order view{
+  display: inline-block;
+  width: 40%;
+  text-align: center;
+  vertical-align: middle;
+}
+.submit-order .special{
+  font-size: 40rpx;
+}
+.submit-order .line{
   display: inline-block;
   width: 3rpx;
   background: rgba(255,255,255,.4);
   height: 60rpx;
   vertical-align: middle;
-  margin: 0 169rpx 0 81rpx;
+  margin-right: -3rpx;
+}
+.submit-order button{
+  display: inline-block;
+  font-size: 28rpx;
+  color: #fff;
+  height: 100%;
+  border: none;
+  vertical-align: middle;
+  width: 60%;
+  line-height: 100rpx;
 }

@@ -22,10 +22,11 @@
 </view>
 
 <view class='submit-order'>
-  ￥199<text>.00</text>
-  <view></view>
-  <button form-type='submit'  >提交订单</button>
-  
+ 
+  <view><text class='special'>￥199</text><text>.00</text></view>
+   <view class='line'></view> 
+  <button bindtap='subMitorder' plain='true'>提交订单</button>
+ 
 </view>
 </form>
 </view>

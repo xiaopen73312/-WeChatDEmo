@@ -25,5 +25,5 @@
 
   <view class='common goback-home' bindtap='backhome'>返回首页</view>
 </view>
-<view class='pay-now'>去支付</view>
+<button class='pay-now'>去支付</button>
 </view>
