@@ -11,24 +11,25 @@
         <swiper-item>
             <scroll-view scroll-y="true" class="scoll-h" >
                <block wx:if='{{show}}'>
-                <view>
+                <view  wx:for="{{booking}}" wx:key="index">
                   <view class='order-des'> 
-                    <view>订单号：1218428</view>
+                    <view>{{item.booking_no}}</view>
                       <view class='time-wrapper'>
-                        <text decode="{{true}}" space='emsp'>&emsp;入住：2018-03-06</text>
-                        <text class='time'>退房：2018-03-08</text>
-                        <text>共3晚</text>
+                        <text decode="{{true}}" space='emsp'>&emsp;入住：{{item.checkin}}</text>
+                        <text class='time'>退房：{{item.checkout}}</text>
+                        <text>共{{item.days}}晚</text>
                       </view>
                       <view>
-                        <text decode="{{true}}" space='emsp'>&emsp;房型：大床房</text>
+                        <text decode="{{true}}" space='emsp'>&emsp;房型：{{item.room_category.room_category_name}}</text>
                       </view>
                   </view>
                   <view class='order-price'>
                       <view class='left'>
-                        订单总价：<text class='text1'>￥599.00</text>
+                        订单总价：<text class='text1'>{{item.amount}}</text>
                       </view>
                       <view class='right'>
-                        取消订单<text class='text2'>立即支付</text>
+                       <text wx:if="{{item.get_payment_status == 'Pending'}}">取消订单</text>
+                        <text class='text2' wx:if="{{item.get_payment_status != 'Completed'}}">立即支付</text>
                       </view>
                   </view>
                 </view>
@@ -41,6 +42,74 @@
                 </block>
             </scroll-view>
         </swiper-item>
+
+        <swiper-item>
+            <scroll-view scroll-y="true" class="scoll-h" >
+               <block wx:if='{{show}}'>
+                <view  wx:for="{{booking}}" wx:key="index">
+                  <view class='order-des' wx:if="{{item.get_payment_status == 'Pending'}}"> 
+                    <view>{{item.booking_no}}</view>
+                      <view class='time-wrapper'>
+                        <text decode="{{true}}" space='emsp'>&emsp;入住：{{item.checkin}}</text>
+                        <text class='time'>退房：{{item.checkout}}</text>
+                        <text>共{{item.days}}晚</text>
+                      </view>
+                      <view>
+                        <text decode="{{true}}" space='emsp'>&emsp;房型：{{item.room_category.room_category_name}}</text>
+                      </view>
+                  </view>
+                  <view class='order-price'>
+                      <view class='left'>
+                        订单总价：<text class='text1'>{{item.amount}}</text>
+                      </view>
+                      <view class='right'>
+                        取消订单<text class='text2'>立即支付</text> </view>
+                  </view>
+                </view>
+               </block>
+               <block wx:else='{{show}}'>
+                  <view class='no-order'>
+                    <image src='../images/icon_noorder.png'></image>
+                    <view>您目前尚无此类订单</view>
+                  </view> 
+                </block>
+            </scroll-view>
+        </swiper-item>
+
+          <swiper-item>
+            <scroll-view scroll-y="true" class="scoll-h" >
+               <block wx:if='{{show}}'>
+                <view  wx:for="{{booking}}" wx:key="index">
+                  <view class='order-des'  wx:if="{{item.get_payment_status != 'Pending' && item.status == 'Confirm Booking'}}"> 
+                    <view>{{item.booking_no}}</view>
+                      <view class='time-wrapper'>
+                        <text decode="{{true}}" space='emsp'>&emsp;入住：{{item.checkin}}</text>
+                        <text class='time'>退房：{{item.checkout}}</text>
+                        <text>共{{item.days}}晚</text>
+                      </view>
+                      <view>
+                        <text decode="{{true}}" space='emsp'>&emsp;房型：{{item.room_category.room_category_name}}</text>
+                      </view>
+                  </view>
+                  <view class='order-price'  wx:if="{{item.get_payment_status != 'Pending' && item.status == 'Confirm Booking'}}">
+                      <view class='left'>
+                        订单总价：<text class='text1'>{{item.amount}}</text>
+                      </view>
+                     <view class='right' wx:if="{{item.get_payment_status == 'Partial'}}">
+                      <text class='text2'>立即支付</text>
+                     </view>
+                  </view>
+                </view>
+               </block>
+               <block wx:else='{{show}}'>
+                  <view class='no-order'>
+                    <image src='../images/icon_noorder.png'></image>
+                    <view>您目前尚无此类订单</view>
+                  </view> 
+                </block>
+            </scroll-view>
+        </swiper-item>
+
     </swiper>
 </view>
 </block>
