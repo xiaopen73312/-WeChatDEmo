@@ -1,6 +1,7 @@
 var app = getApp();
 Page({
   data: {
+    booking: [],
     show: true,
     winHeight: "",//窗口高度,
     winWidth:'',
@@ -38,6 +39,37 @@ Page({
     }
   },
   onLoad: function () {
+
+    var that = this;
+    app.func.req('get', 'bookings?fields=id,booking_no,checkin,checkout,created_at,status,get_payment_status,source,expected_checkin_time,invoice_no,guest_id&additional_fields=hotel,city,hotel_image,booking_rooms&format_response[batch][offset]=0&format_response[batch][count]=10&format_response[sort_params][sort_on]=checkin_date&format_response[sort_params][ascending]=true&filters[status]=0&user_mode[]=CorporateGuest&version=118&partner_app_version=118&android_id=706529785c7821a9&idfa=036e3e5b-1232-4ff6-82f8-c4adbff252cc&sid=1521699554337',
+      {
+        // id:440305,
+        // key: app.globalData.tencentMapKey
+      },
+      function (res) {
+
+        console.log(res)
+
+        var arr = []
+        if (res.bookings.length != 0) {
+          res.bookings.forEach(function (item, index) {
+            var date = new Date(item.checkout).getTime() - new Date(item.checkin).getTime()
+            var days = Math.floor(date / (24 * 3600 * 1000))
+            return arr.push(Object.assign(item, { days: days }))
+          })
+          that.setData({
+            booking: arr,
+            show: true,
+          });
+        } else {
+          that.setData({
+            booking: [],
+            show: false,
+          })
+        }
+
+      });
+
     var that = this;
     //  高度自适应
     wx.getSystemInfo({
