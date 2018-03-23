@@ -25,6 +25,7 @@
         </view>
     </view>
     <button bindtap='hotelList'>预定</button>
+     <!-- <button bindtap='search'>附近OYO</button> -->
   </view>
 </view>
 

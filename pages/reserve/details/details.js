@@ -38,7 +38,8 @@ Page({
 
   getMap:function(){
     wx.navigateTo({
-      url: '../../map/map?latitude=' + this.data.latitude + '&longitude=' + this.data.longitude + '&name=' + this.data.hotelName,
+      // url: '../../map/map?latitude=' + this.data.latitude + '&longitude=' + this.data.longitude + '&name=' + this.data.hotelName,
+      url: '../../regeocoding/regeocoding?latitude=' + this.data.latitude + '&longitude=' + this.data.longitude + '&name=' + this.data.hotelName,
     })
   },
 
@@ -57,7 +58,7 @@ Page({
   callPhone:function()
   {
     wx.makePhoneCall({
-      phoneNumber: '8888888'  
+      phoneNumber: '400-898-2288'  
     })
     } , 
     // var url='';

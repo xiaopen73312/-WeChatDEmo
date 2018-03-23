@@ -91,7 +91,11 @@ Page({
       url: '../calendar/index?begin=' + this.data.date.indate + '&end=' + this.data.date.outdate ,
     })
   },
-  
+  search: function() {
+    wx.navigateTo({
+      url: '../search/search' ,
+    })
+  },
    
   
   //定位当前城市

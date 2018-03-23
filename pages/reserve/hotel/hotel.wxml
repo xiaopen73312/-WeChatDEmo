@@ -5,9 +5,9 @@
     <text bindtap='hotelDetail' class='location'>酒店位置<text class='triangle'></text></text>
   </view>
  
-   <loading hidden="{{hidden}}">
+     <loading hidden="{{hidden}}">
   加载中...
- </loading>
+ </loading>  
  <view class='hotel-card-wrapper' wx:for="{{hotels}}" wx:key="*this">
  
   <view class='wrapper' wx:if="{{index < 9 }}" bindtap='hotelDetail' id='{{item.id}}'>
@@ -25,7 +25,7 @@
       </view>
     </view>
     <view class='price'>
-      <view>19<text class='text'>起</text></view>
+      <view>{{item.pricing[0]}}<text class='text'>起</text></view>
     </view>
   </view>
  </view>

@@ -14,7 +14,10 @@
     "pages/request-payment/request-payment",
     "pages/more/more",
     "pages/more/login/login",
-    "pages/switchcity/switchcity"
+    "pages/switchcity/switchcity",
+    "pages/suggestion/suggestion",
+    "pages/regeocoding/regeocoding",
+    "pages/search/search"
   ],
   "window": {
     "backgroundTextStyle": "light",
