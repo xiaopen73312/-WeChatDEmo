@@ -1,14 +1,16 @@
 // pages/more/more.js
+var app = getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    login: true,  //判断用户是否已登录
+    login: false,  //判断用户是否已登录
   },
   loginOrregist: function() {
-    wx.redirectTo({
+    //redirectTo navigateTo
+    wx.navigateTo({
       url: './login/login',
     })
   },
@@ -30,7 +32,12 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-  
+    this.setData({
+
+      login: app.globalData.defaultLogin,
+
+    })
+    console.log('login:',this.data.login)
   },
 
   /**
@@ -69,6 +76,18 @@ Page({
   },
   //退出登录
   loginout: function() {
+    wx.clearStorage({
+      success: function (res) {
+        console.log('清除登入记录')
+      }
+    })
+    app.globalData.defaultLogin=false;
 
+    this.setData({
+
+      login: app.globalData.defaultLogin,
+
+    })
+    console.log('login：', app.globalData.defaultLogin)
   }
 })

@@ -11,7 +11,7 @@
       </view>
     </block>
   </view>
-  <view class='hotline'>我的客服<text>021-74839299</text>
+  <view class='hotline'>我的客服<text>400-898-2288</text>
     <image src='../images/icon_phone_red.png'></image>
   </view>
   <view class='loginout' wx:if='{{login}}' bindtap='loginout'>

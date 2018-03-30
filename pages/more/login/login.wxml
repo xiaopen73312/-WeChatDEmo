@@ -2,16 +2,18 @@
   <view class='common'>
     <view>
       <image src='../../images/icon_login_phone.png'></image>
-      <input placeholder='请输入手机号码' placeholder-style="opacity: 0.6;"></input>
-    </view>
-  
-    <image class='code' src='../../images/button_verification_red.png'></image>
+      <input placeholder='请输入手机号码'  maxlength="11" bindinput="inputPhoneNum" placeholder-style="opacity: 0.6;"></input>
+   </view>
+     <text wx:if="{{send}}" class="sendMsg" bindtap="sendMsg">发送</text>
+    <text wx:if="{{alreadySend}}" class="sendMsg" bindtap="sendMsg">{{second+"s"}}</text>
+   
+    <!-- <image class='code' src='../../images/button_verification_red.png'></image> -->
   </view>
   <view class='common special'>
     <view>
         <image src='../../images/icon_login_password.png'></image>
-      <input placeholder='请输入验证码' placeholder-style="opacity: 0.6;"></input>
+      <input placeholder='请输入验证码'   bindinput="addCode" placeholder-style="opacity: 0.6;"></input>
       </view>
   </view>
-  <button>确定</button>
+  <button bindtap="onSubmit" type="{{buttonType}}" disabled="{{disabled}}" >确定</button>
 </view>
