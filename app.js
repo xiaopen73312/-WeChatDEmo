@@ -16,10 +16,50 @@ App({
    defaultEndd:1,
    ACCESS_TOKEN:'',
    OPEN_ID:'',
-   SESSION_KEY:''
+   SESSION_KEY:'',
+   defaultLogin:false
   },
   
   onLaunch: function () {
+    var that = this;
+    wx.getStorage({
+      //获取数据的key
+      key: 'token',
+      success: function (res) {
+        
+        console.log(res)
+        that.globalData.defaultLogin =true;
+        // this.setData({
+        //   defaultLogin: true
+        // })
+      },
+      /**
+       * 失败会调用
+       */
+      fail: function (res) {
+        console.log(res)
+      }
+    }),
+    wx.login({
+
+      success: function (res) {
+
+        var code = res.code;
+
+        if (code) {
+
+          console.log('获取用户登录凭证：' + code);
+
+        } else {
+
+          console.log('获取用户登录态失败：' + res.errMsg);
+
+        }
+
+      }
+
+    }); 
+
     //调用API从本地缓存中获取数据
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
@@ -113,7 +153,42 @@ App({
   //     })
   //   }
   // },
-  
+  /**
+   * 异步存储
+   */
+  listenerStorageSave: function () {
+    //以键值对的形式存储 传进去的是个对象
+    wx.setStorage({
+      key: 'key',
+      data: '我是storeage异步存储的信息',
+      success: function (res) {
+        console.log(res)
+      }
+    })
+  },
+  /**
+   * 异步取信息
+   */
+  listenerStorageGet: function () {
+    var that = this;
+    wx.getStorage({
+      //获取数据的key
+      key: 'key',
+      success: function (res) {
+        console.log(res)
+        that.setData({
+          //
+          storageContent: res.data
+        })
+      },
+      /**
+       * 失败会调用
+       */
+      fail: function (res) {
+        console.log(res)
+      }
+    })
+  },
 
   func: {
     req: http.req

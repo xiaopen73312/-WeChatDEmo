@@ -14,12 +14,32 @@ Page({
     hotelName: 'OYO8005 莲之乡酒店',
     hotelAddress: '',
     hotelInfo: '',
+    roomNum:1,
   },
   subMitorder:function() {
     
     wx.redirectTo({
       url: '../pay/pay',
     })
+  },
+  redRooms:function(){
+    var that = this;
+    if (that.data.roomNum>1){
+      that.setData({
+        roomNum: that.data.roomNum - 1,
+
+      });
+    }
+   
+    
+  },
+  addRooms:function(){
+    var that = this;
+    if (that.data.roomNum <91)
+    that.setData({
+      roomNum: that.data.roomNum+1
+
+    });
   },
   /**
    * 生命周期函数--监听页面加载
@@ -100,6 +120,9 @@ Page({
   formSubmit:function(e)
     {
     console.log('e', e)
+      
+
+
     wx.request({
       url: `https://api.weixin.qq.com/cgi-bin/message/wxopen/template/send?access_token=${app.globalData.ACCESS_TOKEN}`,
      
@@ -139,7 +162,7 @@ Page({
             "color": "#173177"
           },
           "keyword8": {
-            "value": "jackie",
+            "value": e.detail.userName,
             "color": "#173177"
           },
           "keyword9": {
